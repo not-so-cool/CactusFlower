@@ -9,7 +9,15 @@ function mkPh(k,alt){
   s.innerHTML=`<rect width="400" height="500" fill="${TONES[n%6]}"/><path d="M0 500V390Q120 335 200 392T400 355V500Z" fill="#000" opacity=".06"/><text x="200" y="254" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="15" fill="#1E211E" opacity=".55">${PHOTOS[k].split('/').pop()}</text>`;
   return s;
 }
-function fill(m){const k=m.dataset.photo,alt=m.dataset.alt||'',i=new Image();i.alt=alt;i.loading='lazy';i.decoding='async';i.onerror=()=>i.replaceWith(mkPh(k,alt));i.src=PHOTOS[k];m.appendChild(i)}
+function fill(m){const k=m.dataset.photo,alt=m.dataset.alt||'';
+  if(/\.(mp4|webm)$/i.test(PHOTOS[k])){
+    const v=document.createElement('video');
+    v.muted=true;v.loop=true;v.playsInline=true;v.autoplay=true;v.preload='metadata';
+    v.setAttribute('aria-label',alt);
+    v.onerror=()=>v.replaceWith(mkPh(k,alt));
+    v.src=PHOTOS[k];m.appendChild(v);return}
+  const i=new Image();i.alt=alt;i.loading='lazy';i.decoding='async';
+  i.onerror=()=>i.replaceWith(mkPh(k,alt));i.src=PHOTOS[k];m.appendChild(i)}
 const esc=t=>String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;');
 const ANIM=!RM&&!!(window.gsap&&window.ScrollTrigger);
 if(ANIM)document.documentElement.classList.add('live');

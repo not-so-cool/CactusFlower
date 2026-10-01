@@ -4,7 +4,7 @@
 const PHOTOS = {
   hero:"images/hero.jpg", cover:"images/cover.jpg", full:"images/full.jpg",
   m1:"images/m1.jpg", m2:"images/m2.jpg", m3:"images/m3.jpg", m4:"images/m4.jpg", m5:"images/m5.jpg",
-  m6:"images/m6.jpg", m7:"images/m7.jpg", m8:"images/m8.jpg", m9:"images/m9.jpg",
+  m6:"images/m6.jpg", m7:"images/m7.jpg", m8:"images/m8.mp4", m9:"images/m9.jpg",
   interlude:"images/interlude.jpg", final:"images/final.jpg"
 };
 
@@ -35,10 +35,10 @@ const MEMORIES = {
     {p:"m5",caption:"TODO: replace with a real memory", x:"8%", y:"68%",w:"28%",rot:2,speed:-.2,pol:1}
   ],
   journey:[
-    {p:"m6",caption:"TODO: replace with a real memory",w:26,rot:-2,dy:"-8vh"},
-    {p:"m7",caption:"TODO: replace with a real memory",w:20,rot:3,dy:"9vh"},
+    {p:"m6",caption:"Our first Diwali together",w:26,rot:-2,dy:"-8vh"},
+    {p:"m7",caption:"Thanks for coming that day, still grateful",w:20,rot:3,dy:"9vh"},
     {p:"m8",caption:"TODO: replace with a real memory",w:28,rot:-1.5,dy:"-4vh"},
-    {p:"m9",caption:"TODO: replace with a real memory",w:22,rot:2.5,dy:"7vh"}
+    {p:"m9",caption:"First trek together...(wasn't really a trek tho lol)",w:22,rot:2.5,dy:"7vh"}
   ],
   journeyHead:"and a few more."
 };
@@ -62,17 +62,17 @@ const CACTUS = {title:"Maybe cactus is actually a pretty fitting name.", lines:[
 const HOPE = ["You are more loved than you probably realize.","You make people's lives better simply by being in them.","You don't need to become someone else to be extraordinary.","And I hope you always remember that."];
 // LETTER — section 11
 const LETTER = {
-  to:"Dear Cactus,",
+  to:"Dear Soukhya,",
   paras:[
     "TODO: replace with a real memory — open with what you most want her to hear.",
     "TODO: replace with a real memory — one or two specific things you're grateful for.",
     "TODO: replace with a real memory — what you hope for her this year."
   ],
-  sign:"TODO: your name"
+  sign:"Akul"
 };
 // INTERLUDE / BIRTHDAY / FINAL — sections 12–14
 const INTERLUDE = {a:"Anyway\u2026", b:"Enough emotional damage."};
-const BIRTHDAY = {title:["Happy Birthday,","Cactus."], line:"I hope this year gives you a ridiculous amount of reasons to smile."};
+const BIRTHDAY = {title:["Happy Birthday,","Soukhya."], line:"I hope this year gives you a ridiculous amount of reasons to smile."};
 const FINAL_LINE = "Here's to another year of being completely, unapologetically you.";
 // FINAL_BUTTON / FINAL_MESSAGES — section 15
 const FINAL_BUTTON = "One last thing\u2026";
